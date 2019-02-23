@@ -8,10 +8,10 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
     preferences.unshift(0);
    
    for(var i = 1; i < preferences.length; i++){
-       var b = preferences[i];
-       var c = preferences[b];
+       var oneLowe = preferences[i];
+       var twoLowe = preferences[oneLowe];
        
-       sum += i == preferences[c];
+       sum += i == preferences[twoLowe];
    }
    sum = sum/3
    return Math.round(sum);
